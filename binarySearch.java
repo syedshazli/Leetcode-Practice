@@ -1,4 +1,7 @@
-class binarySearch {
+public class binarySearch {
+    int[]nums = {2, 3, 4, 5};
+    System.out.println("Binary search returned "+search(nums, 4));
+
     public int search(int[] nums, int target) {
         
         int low = 0;

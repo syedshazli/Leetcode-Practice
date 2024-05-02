@@ -1,3 +1,4 @@
+#include <vector>
 class binarySearch {
 public:
     int search(vector<int>& nums, int target) {
