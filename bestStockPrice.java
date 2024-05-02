@@ -1,3 +1,7 @@
+/**
+*Review and try to complete w/a hashmap
+*/
+
 class Solution {
     public int maxProfit(int[] prices) {
         // find the greatest difference in sorted form
