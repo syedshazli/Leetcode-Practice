@@ -1,3 +1,7 @@
+/**
+*Must retry problem later
+*/
+
 public class binarySearch {
     int[]nums = {2, 3, 4, 5};
     System.out.println("Binary search returned "+search(nums, 4));
