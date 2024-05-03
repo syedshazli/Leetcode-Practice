@@ -18,6 +18,7 @@ Notes for specific problems:
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 [Problem 2]: Binary Search: Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
 
@@ -39,4 +40,24 @@ Explanation: 9 exists in nums and its index is 4
 * If the target is lower than the middle, we need to decrease the upper bound of the array by middle-1
 * If it's neither, we are at the target! Return the index.
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+[Problem 3]: Two sum: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
  
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+*Notes on Problem
+*This solution is O(n^2). When you redo, can you think of a better solution using hashmap? Maybe store target in a hashmap?
+*Double for loop that returns the indexes the two numbers in a array that add up to target
+* i!=j ensures we are not adding up the same element
+ 
+------------------------------------------------------------------------------------------------------------------------------------------------
