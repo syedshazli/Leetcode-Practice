@@ -3,7 +3,7 @@ Join me on my leetcode journey.
 
 Notes for specific problems:
 
-Invert Binary Tree: Given the root of a binary tree, invert the tree, and return its root.
+[Problem 1]: Invert Binary Tree: Given the root of a binary tree, invert the tree, and return its root.
 
 *Notes on Problem
 * My implementation is a Post Order Traversal of the Tree
@@ -13,13 +13,11 @@ Invert Binary Tree: Given the root of a binary tree, invert the tree, and return
 
 
 
-*
-*
-*
-*
 
 
-Binary Search: Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+
+
+[Problem 2]: Binary Search: Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
 
 You must write an algorithm with O(log n) runtime complexity.
 
