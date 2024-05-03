@@ -1,3 +1,9 @@
+/**
+*This solution is O(n^2). When you redo, can you think of a better solution using hashmap? Maybe store target in a hashmap?
+*Double for loop that returns the indexes the two numbers in a array that add up to target
+* i!=j ensures we are not adding up the same element
+*/
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         
