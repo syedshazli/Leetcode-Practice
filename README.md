@@ -8,7 +8,9 @@ Notes for specific problems:
 *Notes on Problem
 * My implementation is a Post Order Traversal of the Tree
 * The implementation uses recursion to find the leaf nodes, which then return the parent node to allow swapping
+* Set the value of the left and right nodes to new TreeNode variables
 * We switch the left and the right of the roots to ivnert the tree properly
+* 
 ![image](https://github.com/syedshazli/Leetcode-Practice/assets/146783525/7b5327f3-bec2-45f7-bbdf-9a9c6b2041ad)
 
 
