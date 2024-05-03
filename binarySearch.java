@@ -1,5 +1,12 @@
 /**
 *Must retry problem later
+*Notes on Problem
+* Think of the search like an array where you split the size each time you finish iterating the while loop
+* Look closely at how we determine the middle of the array. It is low + ((high -low)/2) You initially thought that low was included in the parenthesis
+* We set val to the middle value to determine if our target is higher or lower than our middle value
+* If the target is higher, then we need to increase the lower bound of the array by middle+1
+* If the target is lower than the middle, we need to decrease the upper bound of the array by middle-1
+* If it's neither, we are at the target! Return the index.
 */
 
 public class binarySearch {
