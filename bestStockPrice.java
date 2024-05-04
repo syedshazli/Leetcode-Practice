@@ -1,6 +1,12 @@
 /**
 *Review and try to complete w/a hashmap
 *will retry in a couple days
+*Notes
+*Set the smallest to the first element
+Loop through, if current stock is less than smallest set current to smallest
+If the next element minus smalelst is greater than a max variable
+Set max variable to next element minus smallest
+Return max variable
 */
 
 class Solution {
