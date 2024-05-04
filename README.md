@@ -61,3 +61,26 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 * i!=j ensures we are not adding up the same element
  
 ------------------------------------------------------------------------------------------------------------------------------------------------
+[Problem 4]: firstBadVersion: You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+
+Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
+
+You are given an API bool isBadVersion(version) which returns whether version is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.
+
+ 
+
+Example 1:
+
+Input: n = 5, bad = 4
+Output: 4
+Explanation:
+call isBadVersion(3) -> false
+call isBadVersion(5) -> true
+call isBadVersion(4) -> true
+Then 4 is the first bad version.
+
+  *Notes
+      * This is a binary search problem as we want to minimize function calls, so instead of O(n) with binary search it is O( log n)
+      * Everything about the binary search stays the same. However, to minimize isBadVersion calls, if we're at a bad version in the middle, we make our upper bound the middle.
+      * our answer will reside in our variable low. This is because we keep decreasing high if it's a bad version, and increasing low if not. At the point where low>high, we found the bad version
+      ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
