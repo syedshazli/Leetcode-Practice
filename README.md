@@ -79,8 +79,38 @@ call isBadVersion(5) -> true
 call isBadVersion(4) -> true
 Then 4 is the first bad version.
 
-  *Notes
+ *Notes
       * This is a binary search problem as we want to minimize function calls, so instead of O(n) with binary search it is O( log n)
       * Everything about the binary search stays the same. However, to minimize isBadVersion calls, if we're at a bad version in the middle, we make our upper bound the middle.
       * our answer will reside in our variable low. This is because we keep decreasing high if it's a bad version, and increasing low if not. At the point where low>high, we found the bad version
-      ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Problem 5]: Valid Parentheses: Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+ 
+
+Example 1:
+
+Input: s = "()"
+Output: true
+Example 2:
+
+Input: s = "()[]{}"
+Output: true
+Example 3:
+
+Input: s = "(]"
+Output: false
+
+*Notes
+* This is a notroious stack problem. How do we recognize this?
+*  We can notice this by seeing that the answer directly depends on a corresponding element
+*  Each time we have a opening parentheses, push the closing parenthesis to the stack
+*  If the stack is empty or we don't find the closing parenthesis next, we return false
+*  Else, it's true.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
