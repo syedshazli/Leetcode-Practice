@@ -79,8 +79,8 @@ call isBadVersion(5) -> true
 call isBadVersion(4) -> true
 Then 4 is the first bad version.
 
- *Notes
-      * This is a binary search problem as we want to minimize function calls, so instead of O(n) with binary search it is O( log n)
+ *Notes    
+   * This is a binary search problem as we want to minimize function calls, so instead of O(n) with binary search it is O( log n)
       * Everything about the binary search stays the same. However, to minimize isBadVersion calls, if we're at a bad version in the middle, we make our upper bound the middle.
       * our answer will reside in our variable low. This is because we keep decreasing high if it's a bad version, and increasing low if not. At the point where low>high, we found the bad version
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
