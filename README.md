@@ -160,9 +160,40 @@ Explanation: "raceacar" is not a palindrome.
 
 
 *Notes
-* s.replaceAll("\\p{Punct}", ") will remove punctuations, but .toLowerCase and replaceAll (" ", "") will remove all spaces and convert uppercase to lowercase
+* s.replaceAll("\\p{Punct}", ") will remove punctuations, and .toLowerCase and replaceAll (" ", "") will remove all spaces and convert uppercase to lowercase
 * This could honestly be a stack problem, maybe redo as a stack question
 * Create a new string and add letters from back to front
 * Look very closely for syntax to adding from back to front
 * If that string is equal to original, true, if not, false.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[FIRST DYNAMIC PROGRAMMING PROBLEM: Problem 8]: Climbing Stairs: You are climbing a staircase. It takes n steps to reach the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+ 
+
+Example 1:
+
+Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
+Example 2:
+
+Input: n = 3
+Output: 3
+Explanation: There are three ways to climb to the top.
+1. 1 step + 1 step + 1 step
+2. 1 step + 2 steps
+3. 2 steps + 1 step
+
+   *Notes
+   * This is a Dynamic Programming problem that involves using the Fibonacci sequence. To find the # of ways to get to the nth step you need the n-1 and n-2 step
+   * I tried using recursion for fibonacci sequence before but we ran out of time. This is because you are taking up extra time computing steps that you found previously. When things get big to something like n = 45, this becomes a problem. THIS MEANS USE MEMOIZATION
+   * Instead I removed the recursion aspect all together and stored everything in an array of size n+1.
+   * Set "base cases." arr[0] will be 1, arr[1] is 1, and arr[2] is 2. (arr[0] is 1 in order to make arr[2] = arr[1] + arr[0] true)
+   * From i to n, if i is not 0, 1, 2, arr[n] equals arr[n-1] + arr[n-2]
+   * Return n.
+   * My first Dynamic Programming problem. Was getting out of bounds errors for a bit and had to manipulate size of the array to figure it out
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
