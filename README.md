@@ -141,3 +141,28 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 * Set max variable to next element minus smallest
 *  Return max variable
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Problem 7]: Valid Palindrome: A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+ 
+
+Example 1:
+
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+Example 2:
+
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
+
+
+*Notes
+* s.replaceAll("\\p{Punct}", ") will remove punctuations, but .toLowerCase and replaceAll (" ", "") will remove all spaces and convert uppercase to lowercase
+* This could honestly be a stack problem, maybe redo as a stack question
+* Create a new string and add letters from back to front
+* Look very closely for syntax to adding from back to front
+* If that string is equal to original, true, if not, false.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
