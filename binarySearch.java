@@ -1,5 +1,5 @@
 /**
-*Must retry problem later
+*Redid the problem and understood the intuition.
 *Notes on Problem
 * Think of the search like an array where you split the size each time you finish iterating the while loop
 * Look closely at how we determine the middle of the array. It is low + ((high -low)/2) You initially thought that low was included in the parenthesis
