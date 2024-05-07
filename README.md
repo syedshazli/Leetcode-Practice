@@ -197,3 +197,25 @@ Explanation: There are three ways to climb to the top.
    * Return n.
    * My first Dynamic Programming problem. Was getting out of bounds errors for a bit and had to manipulate size of the array to figure it out
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Problem 9]: Majority Element: Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+ 
+
+Example 1:
+
+Input: nums = [3,2,3]
+Output: 3
+Example 2:
+
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
+
+ *Notes
+* I wanted to design this with a hashmap, so I decided we wanted the key to be the actual number in the array
+* And the value to be number of times the number was found
+* With the getOrDefault method, if the number was already present, we added 1 to the value of the key
+* If the key is greater than length of array/2, then we found our number. Return this number as the answer
+* If this was never accessed, return 0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
