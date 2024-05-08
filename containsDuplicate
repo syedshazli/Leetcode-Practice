@@ -1,3 +1,9 @@
+*Notes
+* I immedietley related this to a Hashset problem due to us using similar logic in DFS/BFS
+* Use a HashSet of integers
+* From i to nums.length, if we've seen the number ( seen.contains(nums[i] ) return true
+* Otherwise, add the number to the hash set
+* Return false outside the loop
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         //this seems like a stack problem,
