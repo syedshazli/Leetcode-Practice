@@ -219,3 +219,23 @@ Output: 2
 * If the key is greater than length of array/2, then we found our number. Return this number as the answer
 * If this was never accessed, return 0
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Problem 10]: Contains Duplicate: Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+ 
+
+Example 1:
+
+Input: nums = [1,2,3,1]
+Output: true
+Example 2:
+
+Input: nums = [1,2,3,4]
+Output: false
+
+*Notes
+* I immedietley related this to a Hashset problem due to us using similar logic in DFS/BFS
+* Use a HashSet of integers
+* From i to nums.length, if we've seen the number ( seen.contains(nums[i] ) return true
+* Otherwise, add the number to the hash set
+* Return false outside the loop
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
