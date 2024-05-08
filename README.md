@@ -1,5 +1,5 @@
 # Leetcode-Practice
-Join me on my leetcode journey.
+Join me on my leetcode journey. Problems are based off the Grind 75. Will look to do more after interviews. Read more here: https://www.techinterviewhandbook.org/grind75?hours=10&weeks=11
 
 Notes for specific problems:
 
