@@ -239,3 +239,14 @@ Output: false
 * Otherwise, add the number to the hash set
 * Return false outside the loop
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Problem 11]: Merge Two Sorted Lists: You are given the heads of two sorted linked lists list1 and list2.
+
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+Return the head of the merged linked list.
+![image](https://github.com/syedshazli/Leetcode-Practice/assets/146783525/69d23f55-2ff4-4bc4-8e60-850f10dfdc87)
+*Notes
+* One of the solutions requires having a dummy node start at the beginning of the list
+* s
+* s
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
