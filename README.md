@@ -260,3 +260,24 @@ Return the head of the merged linked list.
   *  if list1/list 2 is not null, current.next = list1/list2. This is because after we went through the lists, one of them was outstandingly greater/smaller. so we just append what's left onto current
   * return dummy.next, since dummy is just the first value of current
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FIRST PYTHON SOLUTION: [Problem 11]: Valid Anagram: Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+Output: true
+Example 2:
+
+Input: s = "rat", t = "car"
+Output: false
+
+*Notes
+* All we need to do is check if the FREQUENCY of characters in the first string matches that of the second string
+* We can do this by making 2 hashmaps (dictionaries in Python), one for string s and one for string t
+* Then go through all characters in s. The 'key' is the character and the value is Hashmap.get(char, 0) +1
+* Do the same for all characters in t.
+* In python when we do equals equals for the two hashmaps, it will essentially check if the frequencies are the same.
+* Function will return true if the frequencies in hashmaps are the same and false otherwise
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
