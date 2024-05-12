@@ -3,7 +3,7 @@ Join me on my leetcode journey. Problems are based off the Neetcode 150. Will lo
 
 Notes for specific problems:
 
-[Problem 1]: Invert Binary Tree: Given the root of a binary tree, invert the tree, and return its root.
+EASY: [Problem 1]: Invert Binary Tree: Given the root of a binary tree, invert the tree, and return its root.
 
 *Notes on Problem
 * My implementation is a Post Order Traversal of the Tree
@@ -20,7 +20,7 @@ Notes for specific problems:
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Problem 2]: Binary Search: Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+EASY: [Problem 2]: Binary Search: Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
 
 You must write an algorithm with O(log n) runtime complexity.
 
@@ -41,7 +41,7 @@ Explanation: 9 exists in nums and its index is 4
 * If it's neither, we are at the target! Return the index.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 3]: Two sum: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+EASY: [Problem 3]: Two sum: Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
@@ -61,7 +61,7 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 * i!=j ensures we are not adding up the same element
  
 ------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 4]: firstBadVersion: You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
+EASY: [Problem 4]: firstBadVersion: You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
 
 Suppose you have n versions [1, 2, ..., n] and you want to find out the first bad one, which causes all the following ones to be bad.
 
@@ -84,7 +84,7 @@ Then 4 is the first bad version.
       * Everything about the binary search stays the same. However, to minimize isBadVersion calls, if we're at a bad version in the middle, we make our upper bound the middle.
       * our answer will reside in our variable low. This is because we keep decreasing high if it's a bad version, and increasing low if not. At the point where low>high, we found the bad version
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 5]: Valid Parentheses: Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+EASY: [Problem 5]: Valid Parentheses: Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 An input string is valid if:
 
@@ -114,7 +114,7 @@ Output: false
 *  Else, it's true.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 6]: Best Stock Price: You are given an array prices where prices[i] is the price of a given stock on the ith day.
+EASY: [Problem 6]: Best Stock Price: You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
 You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 
@@ -141,7 +141,7 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 * Set max variable to next element minus smallest
 *  Return max variable
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 7]: Valid Palindrome: A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+EASY: [Problem 7]: Valid Palindrome: A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
 Given a string s, return true if it is a palindrome, or false otherwise.
 
@@ -166,7 +166,7 @@ Explanation: "raceacar" is not a palindrome.
 * Look very closely for syntax to adding from back to front
 * If that string is equal to original, true, if not, false.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[FIRST DYNAMIC PROGRAMMING PROBLEM: Problem 8]: Climbing Stairs: You are climbing a staircase. It takes n steps to reach the top.
+EASY: [FIRST DYNAMIC PROGRAMMING PROBLEM: Problem 8]: Climbing Stairs: You are climbing a staircase. It takes n steps to reach the top.
 
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
@@ -197,7 +197,7 @@ Explanation: There are three ways to climb to the top.
    * Return n.
    * My first Dynamic Programming problem. Was getting out of bounds errors for a bit and had to manipulate size of the array to figure it out
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 9]: Majority Element: Given an array nums of size n, return the majority element.
+EASY: [Problem 9]: Majority Element: Given an array nums of size n, return the majority element.
 
 The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
 
@@ -219,7 +219,7 @@ Output: 2
 * If the key is greater than length of array/2, then we found our number. Return this number as the answer
 * If this was never accessed, return 0
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 10]: Contains Duplicate: Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+EASY: [Problem 10]: Contains Duplicate: Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
  
 
@@ -239,7 +239,7 @@ Output: false
 * Otherwise, add the number to the hash set
 * Return false outside the loop
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Problem 11]: Merge Two Sorted Lists: You are given the heads of two sorted linked lists list1 and list2.
+EASY: [Problem 11]: Merge Two Sorted Lists: You are given the heads of two sorted linked lists list1 and list2.
 
 Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 
@@ -260,7 +260,7 @@ Return the head of the merged linked list.
   *  if list1/list 2 is not null, current.next = list1/list2. This is because after we went through the lists, one of them was outstandingly greater/smaller. so we just append what's left onto current
   * return dummy.next, since dummy is just the first value of current
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-FIRST PYTHON SOLUTION: [Problem 11]: Valid Anagram: Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+EASY: FIRST PYTHON SOLUTION: [Problem 11]: Valid Anagram: Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
 An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
@@ -280,7 +280,7 @@ Output: false
 * Do the same for all characters in t.
 * In python when we do equals equals for the two hashmaps, it will essentially check if the frequencies are the same.
 * Function will return true if the frequencies in hashmaps are the same and false otherwise
-------------------------------------------------------------------------------------------------------------------------------------FIRST DFS SOLUTION: [Problem 12]: Flood Fill: An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
+------------------------------------------------------------------------------------------------------------------------------------FIRST DFS SOLUTION: [Problem 12]: Flood Fill: An image is represented by EASY: [Problem 12]: Flood Fill: an m x n integer grid image where image[i][j] represents the pixel value of the image.
 
 You are also given three integers sr, sc, and color. You should perform a flood fill on the image starting from the pixel image[sr][sc].
 
@@ -316,4 +316,5 @@ Explanation: The starting pixel is already colored 0, so no changes are made to 
 * My solution is DFS because once we find a valid 4 directional spot, we suspend all operations and explore this spot further and try to find its neighbors
 *
 */
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MEDIUM: [Problem 13] : Lowest Common Ancestor of Binary Search Tree:
