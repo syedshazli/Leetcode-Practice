@@ -280,4 +280,40 @@ Output: false
 * Do the same for all characters in t.
 * In python when we do equals equals for the two hashmaps, it will essentially check if the frequencies are the same.
 * Function will return true if the frequencies in hashmaps are the same and false otherwise
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------FIRST DFS SOLUTION: [Problem 12]: Flood Fill: An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.
+
+You are also given three integers sr, sc, and color. You should perform a flood fill on the image starting from the pixel image[sr][sc].
+
+To perform a flood fill, consider the starting pixel, plus any pixels connected 4-directionally to the starting pixel of the same color as the starting pixel, plus any pixels connected 4-directionally to those pixels (also with the same color), and so on. Replace the color of all of the aforementioned pixels with color.
+
+Return the modified image after performing the flood fill.
+
+![image](https://github.com/syedshazli/Leetcode-Practice/assets/146783525/87527a8a-16e3-40b5-877f-406c5184fcf0)
+
+Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
+Output: [[2,2,2],[2,2,0],[2,0,1]]
+Explanation: From the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.
+Note the bottom corner is not colored 2, because it is not 4-directionally connected to the starting pixel.
+
+
+Example 2:
+
+Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0
+Output: [[0,0,0],[0,0,0]]
+Explanation: The starting pixel is already colored 0, so no changes are made to the image.
+
+
+/**
+*Notes
+* First DFS implementation, congrats!
+* A relativley easy problem once you understand what 4 directional means
+* This means anywhere up, down, left, right connected to our image[sr][sc]
+* We can only alter values that have the same value as the original image[sr][sc] and are related some way (either distantly or direct) 4 directionally 
+* We need to create a DFS helper function as a result
+* First update the current color to the target. Then find if any left, right, up, down equal the oldTarget, and if so call dfs with these parameters
+* left means row-1, right means row+1, up means col-1, down means col+1. Make sure the bounds are valid as well
+* IMPORTANT: base case in main function is that if the image[sr][sc] equals target then we return image
+* My solution is DFS because once we find a valid 4 directional spot, we suspend all operations and explore this spot further and try to find its neighbors
+*
+*/
+
