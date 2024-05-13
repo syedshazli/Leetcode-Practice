@@ -1,4 +1,16 @@
 /**
+* First Binary Search Tree Problem, congratulations
+* I felt like this was similar to a binary search.
+* If the root value is bigger than the target, call the function again with it's left child which would be smaller
+*  Likewise if the root value is smaller than the target, call the function again with it's right child which would be bigger
+*  Return root if none of these are true
+*  This should all be inside a if(root!= null), after that, return Null which means the target isn't available.
+
+*/
+
+
+
+/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -13,6 +25,8 @@
  *     }
  * }
  */
+
+
 class Solution {
     public TreeNode searchBST(TreeNode root, int val) {
         
