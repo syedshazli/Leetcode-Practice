@@ -323,4 +323,27 @@ Explanation: The starting pixel is already colored 0, so no changes are made to 
 *
 */
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-MEDIUM: [Problem 13] : Lowest Common Ancestor of Binary Search Tree:
+EASY: [Problem 13]: Search in a Binary Search Tree
+
+You are given the root of a binary search tree (BST) and an integer val.
+
+Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
+![image](https://github.com/syedshazli/Leetcode-Practice/assets/146783525/80f7de00-48f1-404e-b5d7-d9fd5fafa90d)
+Input: root = [4,2,7,1,3], val = 2
+Output: [2,1,3]
+
+![image](https://github.com/syedshazli/Leetcode-Practice/assets/146783525/68e55203-3d86-49f1-80ab-71871c337ea9)
+Input: root = [4,2,7,1,3], val = 5
+Output: []
+
+*Notes
+* First Binary Search Tree Problem, congratulations
+* I felt like this was similar to a binary search.
+* If the root value is bigger than the target, call the function again with it's left child which would be smaller
+*  Likewise if the root value is smaller than the target, call the function again with it's right child which would be bigger
+*  Return root if none of these are true
+*  This should all be inside a if(root!= null), after that, return Null which means the target isn't available.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TODO: MEDIUM: [Problem 14] : Lowest Common Ancestor of Binary Search Tree:
