@@ -10,27 +10,23 @@ class Solution {
 
 // return  newarray [index, index2]
 HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-int index = 0;
+
 int sumVal = 0;
-int index2 = 0;
+
 
 for(int i = 0; i<nums.length; i++){
-
-    
-   
 
 sumVal = target- nums[i];
 
 
     if(map.containsKey(sumVal)){
-        index = map.get(sumVal);
-        index2 = i;  
+        correct[0] = map.get(sumVal);
+        correct[1] = i; 
           }
 
-map.put( nums[i] , i );
+map.put( nums[i] , i );//added at the end to avoid self reference
     } //end for loop
-     correct[0] = index;
-    correct[1] = index2;
+    
    return correct;
     }
   
