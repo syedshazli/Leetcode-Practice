@@ -357,4 +357,25 @@ Output: []
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-TODO: MEDIUM: [Problem 14] : Lowest Common Ancestor of Binary Search Tree:
+FIRST MEDIUM: [Problem 14] : Lowest Common Ancestor of Binary Search Tree: Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
+
+According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+
+
+![image](https://github.com/syedshazli/Leetcode-Practice/assets/146783525/b7b087cc-03b5-42ad-a00b-28d25eebad84)
+Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+Output: 6
+Explanation: The LCA of nodes 2 and 8 is 6.
+
+![image](https://github.com/syedshazli/Leetcode-Practice/assets/146783525/a4d976c2-807f-4529-86dc-bb142738e984)
+Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+Output: 2
+Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
+
+
+
+* This was very similar to the leetcode problem that searches for a target within a BST.
+* All we really had to change was to say if the root is greater than p and q, search in the left (where all values of BST less than root are on left)
+* if the root is less than p and q, search in the right(where all values of BST greater than root are on the right)
+* else, return the root.
+* This is a DFS implementation
