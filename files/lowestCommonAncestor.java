@@ -1,4 +1,14 @@
 /**
+*Notes
+* This was very similar to the leetcode problem that searches for a target within a BST.
+* All we really had to change was to say if the root is greater than p and q, search in the left (where all values of BST less than root are on left)
+* if the root is less than p and q, search in the right(where all values of BST greater than root are on the right)
+* else, return the root.
+* This is a DFS implementation
+*/
+
+
+/**
  * Definition for a binary tree node.
  * public class TreeNode {
  *     int val;
@@ -16,16 +26,17 @@ class Solution {
         * Compare with other times node is null and find the 
         * Common ancestor means something ABOVE you, and the lowest value of the connected
         * search for the first value that is between p and q. That will be your lowest common ancestor
-        * so is this basically a dfs of root, where root.left = p and root.right = q?
+        * 
          */
 
             if(root != null){
-            if(root.val>p.val){return lowestCommonAncestor(root.right, p, q);}
-            else if(root.val<q.val){return lowestCommonAncestor(root.left, p, q);}
+            if(root.val>p.val && root.val>q.val){return lowestCommonAncestor(root.left, p, q);}
+            else if(root.val<p.val && root.val<q.val){return lowestCommonAncestor(root.right, p, q);}
+           
             }
-           return root; 
+         
 
-
+return root; 
         
 
     }
