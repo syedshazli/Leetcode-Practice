@@ -59,6 +59,17 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 *This solution is O(n^2). When you redo, can you think of a better solution using hashmap? Maybe store target in a hashmap?
 *Double for loop that returns the indexes the two numbers in a array that add up to target
 * i!=j ensures we are not adding up the same element
+
+*Notes ON REVAMPED O(N) SOLUTION
+* Optimized solution this time, O(n) instead of O(n^2)
+* create a hashmap
+* loop through array, constantly updating a variable equal to "target - nums[i]" after every iteration
+* if the variable created is present in the hashmap
+*     set the start index to the map.get(variable)
+*     set the second index to the current index
+*          break to reduce runtime
+* Outside of the if, add the current value and its index to map
+* (added at the end to avoid self reference)
  
 ------------------------------------------------------------------------------------------------------------------------------------------------
 EASY: [Problem 4]: firstBadVersion: You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.
