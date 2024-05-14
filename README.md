@@ -1,5 +1,6 @@
 # Leetcode-Practice
 Join me on my leetcode journey. Problems are based off the Neetcode 150. Will look to do more after interviews. Read more here: https://www.techinterviewhandbook.org/grind75?hours=10&weeks=11
+Additionally, to enhance my Python skills, I will be completing tasks on CodeWars. Read more about CodeWars here: https://www.codewars.com/kata/515e271a311df0350d00000f/train/python
 
 Notes for specific problems:
 
