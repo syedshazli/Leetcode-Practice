@@ -401,3 +401,22 @@ Output: [0]
 * I saw that we can remove the current element if zero, and use append to send the zero to the end of the list
 * Maintains order of the other elements!
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EASY: [Problem 16]: Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+ 
+
+Example 1:
+
+Input: nums = [-4,-1,0,3,10]
+Output: [0,1,9,16,100]
+Explanation: After squaring, the array becomes [16,1,0,9,100].
+After sorting, it becomes [0,1,9,16,100].
+Example 2:
+
+Input: nums = [-7,-3,2,3,11]
+Output: [4,9,9,49,121]
+
+*Notes
+* The sort method in python makes it so much easier
+* Just square the elements (or multiply by itslef) for each i in nums
+* After you're done with the for loop, sort the array, and return the array
