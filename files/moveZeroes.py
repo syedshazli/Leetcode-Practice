@@ -1,3 +1,7 @@
+#Notes
+# I saw the remove and append method looking through W3 schools
+# I saw that we can remove the current element if zero, and use append to send the zero to the end of the list
+# Maintains order of the other elements!
 class Solution(object):
     def moveZeroes(self, nums):
         """
