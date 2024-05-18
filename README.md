@@ -396,8 +396,8 @@ Example 2:
 
 Input: nums = [0]
 Output: [0]
-#Notes
-# I saw the remove and append method looking through W3 schools
-# I saw that we can remove the current element if zero, and use append to send the zero to the end of the list
-# Maintains order of the other elements!
+*Notes
+* I saw the remove and append method looking through W3 schools
+* I saw that we can remove the current element if zero, and use append to send the zero to the end of the list
+* Maintains order of the other elements!
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
