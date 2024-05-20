@@ -1,3 +1,4 @@
+def dictionaryPractice():
 myfamily ={
   "child1":{
     "name": "Hamnah",
