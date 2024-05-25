@@ -440,4 +440,13 @@ Example 2:
 Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 Output: [[1,2],[3,10],[12,16]]
 Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
- 
+*Notes
+* intervals is an array of arrays, representing the intervals in ascending order
+* obv we want to insert newInterval into these existing intervals, while maintining sorted ascending order
+* If newInterval ends before current interval starts, we can add newInterval to result
+* If newInterval starts before current interval ends, we can add current interval to new result array
+* else, we can merge overlaps by taking the minimum of 2 intervals and maximum of the overlapping intervals and make it the new interval
+* appending newInterval outside the loop is crucial
+* Problem is way less intimidating once looking at the test cases and examples honestly
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
