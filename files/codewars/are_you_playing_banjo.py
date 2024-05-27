@@ -1,5 +1,15 @@
+"""
+Description: Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+The function takes a name as its only argument, and returns one of the following strings:
+
+name + " plays banjo" 
+name + " does not play banjo"
+Names given are always valid strings.
+"""
 def are_you_playing_banjo(name):
-    # IPython character/string methods
+    # Python character/string methods
     newname = name[0]
     if newname == 'r' or newname == 'R':
         return name + " plays banjo"
