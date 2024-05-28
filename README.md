@@ -449,7 +449,35 @@ Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 * appending newInterval outside the loop is crucial
 * Problem is way less intimidating once looking at the test cases and examples honestly
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-MEDIUM: [Problem 18]: Three Sum 🤔: Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+EASY: [Problem 18]: Given two integer arrays nums1 and nums2, return an array of their 
+intersection
+. Each element in the result must be unique and you may return the result in any order.
+
+ 
+
+Example 1:
+
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+Example 2:
+
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+Explanation: [4,9] is also accepted.
+
+*Notes
+* Could be pretty easy w/python intersect method but it feels like cheating
+* Create new list
+* loop through any of the lists
+* If the number is in the other list and not in newly created list
+* add number to newly created list
+* return list
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MEDIUM: [Problem 19]: Three Sum 🤔: Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
 Notice that the solution set must not contain duplicate triplets.
 
