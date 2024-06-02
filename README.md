@@ -526,6 +526,10 @@ The distinct triplets are [-1,0,1] and [-1,-1,2].
 Notice that the order of the output and the order of the triplets does not matter.
 
 *Notes
+* Super daunting problem at first and finally got around to getting it done, but needed help. So redo is needed
+* Recommended to do Two Sum II as well due to the sorting aspect in that problem
+
+*Notes
 * TBD 
 * TBD
 * TBD
