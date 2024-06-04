@@ -529,9 +529,31 @@ Notice that the order of the output and the order of the triplets does not matte
 *Notes
 * Super daunting problem at first and finally got around to getting it done, but needed help. So redo is needed
 * Recommended to do Two Sum II as well due to the sorting aspect in that problem
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MEDIUM: [Problem 21]: Group Anagrams: Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ 
+
+Example 1:
+
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+Example 2:
+
+Input: strs = [""]
+Output: [[""]]
+Example 3:
+
+Input: strs = ["a"]
+Output: [["a"]]
 
 *Notes
-* TBD 
-* TBD
-* TBD
+* This took some time but I sat down with the problem and did it. Needed to surf the web to find some python dictionary methods as well
+* For each word, I sorted the word, and then made the array of char's a word again by using join
+* if the word wasnt in the map, we added it, with the key being the sorted word and value being the actual word
+* Else, we appended the value of the sorted word to add the current word
+* Then we went through the hashamp and appended to a resultant list for each value in the map
+* Returned the list of lists
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
