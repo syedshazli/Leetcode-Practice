@@ -295,6 +295,7 @@ Output: false
 * Do the same for all characters in t.
 * In python when we do equals equals for the two hashmaps, it will essentially check if the frequencies are the same.
 * Function will return true if the frequencies in hashmaps are the same and false otherwise
+* Resubmitted using these notes and passed
 
 
   
