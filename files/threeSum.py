@@ -1,3 +1,6 @@
+#includes a binary search aspect
+# required to sort first as done in two sum II
+# need to review a lot
 class Solution(object):
     def threeSum(self, nums):
         """
