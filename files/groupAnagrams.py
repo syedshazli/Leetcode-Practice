@@ -1,4 +1,11 @@
-from collections import defaultdict
+#Notes
+
+#This took some time but I sat down with the problem and did it. Needed to surf the web to find some python dictionary methods as well
+#For each word, I sorted the word, and then made the array of char's a word again by using join
+#if the word wasnt in the map, we added it, with the key being the sorted word and value being the actual word
+#Else, we appended the value of the sorted word to add the current word
+#Then we went through the hashamp and appended to a resultant list for each value in the map
+#Returned the list of lists
 class Solution(object):
     def groupAnagrams(self, strs):
         """
