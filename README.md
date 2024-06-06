@@ -1,10 +1,12 @@
 # Leetcode-Practice
 Join me on my leetcode journey. Problems are based off the Neetcode 150. Will look to do more after interviews. Read more here: (https://neetcode.io/practice)
-.                               Not only is LeetCode a great way to prepare for interviews, but it's a wonderful tool to learn a new language. As a result, to develop my proficency with Python, I will be completing tasks mostly in Python via LeetCode and CodeWars as well. 
+<br><br>Not only is LeetCode a great way to prepare for interviews, but it's a wonderful tool to learn a new language. As a result, to develop my proficency with Python, I will be completing tasks mostly in Python via LeetCode and CodeWars as well. 
+<br>
 * Side note: I will be on vacation from May 16th-May 31. Can't gurantee that I will be able to commit every day but I am definitley going to do a lot to prepare. Additionally, I will be starting my internship on June 10th!
 * Additionally, the WPI Investing Association will atart their summer project on June 1 so I'll do my best to stay consistent on this repo.
+  <br> <br>
 * Progress report 5/29/2024: Honestly, some of the easy problems are starting to actually feel easy. Trying to do the Mediums is tricky, and definitley intimidating at first.
-
+<br>
 Notes for specific problems:
 
 EASY: [Problem 1]: Invert Binary Tree: Given the root of a binary tree, invert the tree, and return its root.
