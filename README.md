@@ -595,6 +595,13 @@ Input: ["we","say",":","yes"]
 Output: ["we","say",":","yes"]
 
 *Notes
-* s
-* s
-* s
+* The encode part wasn't bad in my eyes. 
+* I used the neetcode hint that said to use a character like # to show we're about to start a new word, and the length of the word before the # so we can iterate properly
+* I then sent this combined string to the decode method
+* In decode, I made a variable i that tracked our spot in the combined string, and made a while loop while i was less than length of the string
+* i then made a pointer that said j = i
+* So then while s[j] != "#", I kept adding 1 to j, to represent the length of the string we needed
+* I then said the length was an integer from s[i:j]
+* I then appended from j +1 to length + j + 1
+* set i = j + 1 + length
+* return the list
