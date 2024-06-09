@@ -573,9 +573,28 @@ Input: nums = [1], k = 1
 Output: [1]
 
  *Notes
- * d
- * d
- * d
-
-
+ * I made a hashamp, where the key is the actual number and value is how many times it appears So I used the setdefault method to do this as well
+ * Made a new map that sorted the top frequent keys in ascending order using lambda x: newMap[x]
+ * Then I went through the map until a kcount equaled k, and added the number to a list
+ * returned the list
+ * Due to sorting and the for loop I beleive this is O(n log n) time complexity
 ------------------------------------------------------------------------------------------------------------------------------------
+MEDIUM: [Problem 23]: Encode and Decode String: Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
+
+Please implement encode and decode
+
+Example 1:
+
+Input: ["neet","code","love","you"]
+
+Output:["neet","code","love","you"]
+Example 2:
+
+Input: ["we","say",":","yes"]
+
+Output: ["we","say",":","yes"]
+
+*Notes
+* s
+* s
+* s
