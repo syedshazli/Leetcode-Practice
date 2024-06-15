@@ -5,3 +5,28 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        #use get or default for hashmap?
+        #first, how would we solve on >O(n)
+            #sort the list, loop through, keep a count, if the next element is not 1 more then stop the count
+            # I got that
+        #but, we need to do O(n)
+        if(len(nums) == 0):
+            return 0
+
+        consecutive = {}
+        j = 0
+        maximum = 1
+        for i in nums:
+            consecutive[i] = 0
+        for num in consecutive:
+            if num-1 in consecutive:
+                continue
+            j = 1
+                
+            while num + j in consecutive:
+                j+=1
+            maximum = max(maximum, j)
+
+        return maximum
+
+       
