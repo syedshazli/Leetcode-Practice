@@ -1,4 +1,12 @@
 #O(n)
+#Notes
+# Did this problem alongside Eshaan. Got pretty close to figuring it out but needed some help
+# First set all the values in nums to a hashmap. This sorts the hashmap and gets rid of duplicates
+# For num in the hashmap, if the previous number exists, then we skip the iteration. Else, we found the beginning of the sequene. 
+# Set j to 1 as we are at the beginning of the sequence
+# While num + j is in consecutive, add 1 to j.
+# This ensures that we only check for the next one. If it's not in consecutive, then j resets to 1 on the next iterations
+# Find the max between maximum and j, return maximum
 class Solution(object):
     def longestConsecutive(self, nums):
         """
