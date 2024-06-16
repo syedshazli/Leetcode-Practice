@@ -599,9 +599,34 @@ Output: ["we","say",":","yes"]
 * I used the neetcode hint that said to use a character like # to show we're about to start a new word, and the length of the word before the # so we can iterate properly
 * I then sent this combined string to the decode method
 * In decode, I made a variable i that tracked our spot in the combined string, and made a while loop while i was less than length of the string
-* i then made a pointer that said j = i
+* I then made a pointer that said j = i
 * So then while s[j] != "#", I kept adding 1 to j, to represent the length of the string we needed
 * I then said the length was an integer from s[i:j]
 * I then appended from j +1 to length + j + 1
 * set i = j + 1 + length
 * return the list
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MEDIUM: [Problem 24]: Longest Consecutive Sequence: 128. Longest Consecutive Sequence
+
+Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
+
+You must write an algorithm that runs in O(n) time.
+
+Example 1:
+
+Input: nums = [100,4,200,1,3,2]
+Output: 4
+Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+Example 2:
+
+Input: nums = [0,3,7,2,5,8,4,6,0,1]
+Output: 9 
+*Notes
+* Did this problem alongside Eshaan. Got pretty close to figuring it out but needed some help
+* First set all the values in nums to a hashmap. This sorts the hashmap and gets rid of duplicates
+* For num in the hashmap, if the previous number exists, then we skip the iteration. Else, we found the beginning of the sequene. 
+* Set j to 1 as we are at the beginning of the sequence
+* While num + j is in consecutive, add 1 to j.
+* This ensures that we only check for the next one. If it's not in consecutive, then j resets to 1 on the next iterations
+* Find the max between maximum and j, return maximum
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
