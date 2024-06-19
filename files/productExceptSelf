@@ -1,1 +1,48 @@
+#Horrible time and space complexity, even if it's O(n) 😭
+# Made a loop to get the prefixes and add it to prefix array (anything to the left of the element multiplied)
+# Did the same for the postfixes, but did for postfix array (anything to right side)
+# Also created a special case for if i =0, made sure I could multiply out everything except i
+# Separate for loop, if i was 0 I appended my special case variable
+# If i was the last element, I got the i-1th element from the prefix array
+# else, just append prefix i-1 and postifx i+1
+class Solution(object):
+    def productExceptSelf(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        prefix = []
+        postfix = []
+        output = []
+        mult = 1
+        beginMult = 1
+        for i in range(len(nums)):
+            mult *= nums[i]
+            prefix.append( mult)
+            if(i == 0):
+                continue
+            beginMult *= nums[i]
+            
+        mult = 1
+
+        for i in range(len(nums)-1,-1,-1):
+            mult*=nums[i]
+            postfix.append(mult)
+        
+        postfix.reverse()
+
+
+        for i in range(len(nums)):
+            if(i == 0):
+                output.append(beginMult)
+                #set pre
+            
+            elif (i == len(nums)-1):
+                output.append(prefix[i-1])
+                #set post
+            
+            else:
+                output.append(postfix[i+1]*prefix[i-1])
+
+        return output
 
