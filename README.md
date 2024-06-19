@@ -630,3 +630,29 @@ Output: 9
 * This ensures that we only check for the next one. If it's not in consecutive, then j resets to 1 on the next iterations
 * Find the max between maximum and j, return maximum
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MEDIUM: [Problem 25]: Product of Array Except Self:Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+
+The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
+
+You must write an algorithm that runs in O(n) time and without using the division operation.
+
+ 
+
+Example 1:
+
+Input: nums = [1,2,3,4]
+Output: [24,12,8,6]
+Example 2:
+
+Input: nums = [-1,1,0,-3,3]
+Output: [0,0,9,0,0]
+ 
+
+*Horrible time and space complexity, even if it's O(n) 😭
+* Made a loop to get the prefixes and add it to prefix array (anything to the left of the element multiplied)
+* Did the same for the postfixes, but did for postfix array (anything to right side)
+* Also created a special case for if i =0, made sure I could multiply out everything except i
+* Separate for loop, if i was 0 I appended my special case variable
+* If i was the last element, I got the i-1th element from the prefix array
+* else, just append prefix i-1 and postifx i+1
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
