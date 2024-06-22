@@ -1,14 +1,30 @@
 class Solution(object):
     def twoSum(self, numbers, target):
-        left = 0 
-        right = len(numbers) - 1
-        sum = 0
+        """
+        :type numbers: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+  
 
-        while left < right:
-            sum = numbers[l] + numbers[r]
-            if sum > target:
-                right -= 1
-            elif sum < target:
-                left += 1
+   
+        beginning = 0
+        end = len(numbers)-1
+        arr = []
+
+        while beginning < end:
+            add = numbers[beginning] + numbers[end]
+
+
+            if add > target:
+                #too big, decrease right bound
+                end -=1
+
+            elif add < target:
+                beginning +=1
+                
+
             else:
-                return [left + 1, right + 1]
+                arr.append(beginning+1) 
+                arr.append(end+1)
+                return arr 
