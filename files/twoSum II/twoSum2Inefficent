@@ -1,0 +1,29 @@
+class Solution(object):
+    def twoSum2Inefficent(self, numbers, target):
+        """
+        :type numbers: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+
+        for i in range(len(numbers) - 1):
+            left = i
+            right = len(numbers) - 1
+            newTarget = target - numbers[left]
+            arr = []
+            while left <= right:
+                mid = (left + right) // 2
+
+                if newTarget == numbers[mid] and i != mid:
+                    arr.append(i + 1)
+                    arr.append(mid + 1)
+                    return arr 
+
+                elif newTarget < numbers[mid]:
+                    right = mid - 1
+
+                else:
+                    left = mid + 1
+
+        return arr
+            
