@@ -1,0 +1,26 @@
+class Solution(object):
+    def isPalindromeTwoPointers(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        #first convert everything to lowercase
+        #try not to abuse python methods, and actually use 2 pointers
+        s = s.lower() #removes lowercase
+        exclude = set(string.punctuation)
+        s = ''.join(ch for ch in s if ch not in exclude)
+        s = s.replace(" ","" )
+        
+        backLength = len(s)-1
+        startLength = 0
+
+        for i in range(len(s)):
+            if(s[backLength] == s[startLength]):
+                backLength -= 1
+                startLength += 1
+                continue
+
+            else:
+                return False
+
+        return True
