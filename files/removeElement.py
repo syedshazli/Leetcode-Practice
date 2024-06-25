@@ -11,6 +11,7 @@ class Solution(object):
         #pointer continues to incrmeent
         #stop at pointer that aren't val
         #continue iterate through array, once you get to value thats val 
+        #THE COUNT SERVES AS THE PLACE WHERE WE LAST SAW SOMETHING EQUAL TO TARGET
         for i in range(len(nums)):
             if nums[i] != val:
                 nums[count] = nums[i]
