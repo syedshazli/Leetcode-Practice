@@ -690,3 +690,58 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 * Pretty easy problem if you understand binary search
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[MEDIUM]: Problem 27: Container With Most Water: You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+Notice that you may not slant the container.
+
+ 
+
+Example 1:
+
+
+Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+Example 2:
+
+Input: height = [1,1]
+Output: 1
+ *Notes
+ * Honestly didnt seem like two pointers at first, but once you understand that we have to shift the left and right bounds depending on comparisons between left and right it makes sense
+ * Is sort of like a 2d array, but not really.
+ * Calculate the area using this: (right-left)* min(height[right], height[left])
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[MEDIUM]: Problem 28: Given a string s, find the length of the longest 
+substring
+ without repeating characters.
+
+ 
+
+Example 1:
+
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+Example 2:
+
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+Example 3:
+
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+*Notes
+* I was able to do the pseudocode for this at the gym and honestly wasnt as bad as people made it out to be
+* When you understand that using a set is vital to this, as you can check whether or not an element is in the hashset or not, the problem becoems simpler
+* Calculate the length of the string using right-left+1
+* Remove the left most if you find the right most is already in the set. increment the left by 1 and move on
+* The right is added to the set if it's not in the set (the right is the current one, indicated by a for loop)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
