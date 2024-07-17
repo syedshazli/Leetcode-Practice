@@ -1,3 +1,8 @@
+#right-left +1 is the size of the window
+# on each iteration add the string and its occurence 
+# if the windown size - the greatest hashmap value is greater than k, remove the occurence of the character on left pointer, 
+# incremenet left pointer by 1
+# result = max of result and the window size
 class Solution(object):
     def characterReplacement(self, s, k):
         """
@@ -15,7 +20,7 @@ class Solution(object):
         for right in range(len(s)):
             hashmap[s[right]] = 1 + hashmap.get(s[right],0)
 
-            while (right-left+1) - max(hashmap.values())> k:
+            if (right-left+1) - max(hashmap.values())> k:
                 hashmap[s[left]] -= 1
                 left+=1
                
