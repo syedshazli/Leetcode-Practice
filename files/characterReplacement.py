@@ -5,15 +5,23 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        hashmap = dict()
+        hashmap = {}
+        left = 0
+        res = 0
+        
         # sliding window... while inside a for?
         #uses a hash table as well...
-        for i in range(len(s)):
-            hashmap[s[i]] = hashmap.get(s[i], 0) + 1 #correctly populate
+        #occurences of most comment letter, find the max in hashmap?
+        for right in range(len(s)):
+            hashmap[s[right]] = 1 + hashmap.get(s[right],0)
 
+            while (right-left+1) - max(hashmap.values())> k:
+                hashmap[s[left]] -= 1
+                left+=1
+               
             
-            left = i
-            right = i+k
-            print(hashmap)
-        return 0
+            res = max(res, right-left+1)
+
+
+        return res
         
