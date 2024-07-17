@@ -1,4 +1,3 @@
-
 class Solution(object):
     def checkInclusion(self, s1, s2):
         """
@@ -9,8 +8,7 @@ class Solution(object):
         if len(s2) < len(s1):
             return False
         
-        if s2 == s1:
-            return True
+       
         
         #created the window, slide it over
         str1 = Counter(s1)
@@ -19,15 +17,20 @@ class Solution(object):
             #but if not, keep sliding the window
         #hashtable, add onto a certain key if it's still a valid permutation
         # if not, move pointers
-        for i in range(len(s2)-1):
+        #1,len(s2)-len(s1)+1
+        #len(s2)-1
+        for i in range(len(s2)-len(s1)):
             if str1 == str2:
                 return True
             else:
-                # str2[s2[i:len(s1)+i]] = str2[s2[i:len(s1)+i]]-1
-                # # hashmap[s[right]] = 1 + hashmap.get(s[right],0)
-                # str2[s2[i+1:len(s1)+i+1]] = 1 + str2.get(s2[i+1:len(s1)+i+1],0)
-                # print(str1)
-                # print(str2)
-                str2 = Counter(s2[i:len(s1)+i])
+             
 
+                str2[s2[i]] = str2.get(s2[i], 0)-1
+                if str2[s2[i]] == 0:
+                    str2.pop(s2[i])
+
+                str2[s2[len(s1)+i]] = 1 + str2.get(s2[len(s1)+i],0)
+        
+        return str1 == str2
+     
     
