@@ -1,5 +1,12 @@
+#Notes
+# Not a terrible problem, just needed help getting started with def__init__ and intiialziing the two stacks as arrays
+# The caveat or hard part of the problem comes in retrieiving the minium in O(1) time. We can do this by having another stack that keeps track of the minimum
+# whenever you push, check to see if the val being pushed is less than the minimum (only if the length of the minstack exists)
+#    if it is, make val equal to the end of the minStack
+# outside the if, append to the minStack the val
+#pop, top, annd getmin are one liners as a result of our minStack, Just remember to also pop from minstack when popping from normal stack
 class MinStack(object):
-    obj = []
+ 
 
     def __init__(self):
         self.stack = []
