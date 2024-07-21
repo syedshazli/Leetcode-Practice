@@ -771,3 +771,29 @@ There may exists other ways to achieve this answer too.
 * in this case, we also decrement one from the left side of the window, to remove that current occurence
 * at the end of each iteration, make a variable that tracks the window size (left-right+1), and that will be the return type
 * Also remember to add to the hashmap at the beginning of each iteration
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[MEDIUM]: Problem 30: Permutation in String: Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
+
+In other words, return true if one of s1's permutations is the substring of s2.
+
+ 
+
+Example 1:
+
+Input: s1 = "ab", s2 = "eidbaooo"
+Output: true
+Explanation: s2 contains one permutation of s1 ("ba").
+Example 2:
+
+Input: s1 = "ab", s2 = "eidboaoo"
+Output: false
+
+*Notes
+* My first time using Counter, which essentially maps a key to a value (AKA a letter to how many times it occurs)
+* I initialize the first variable as a counter for str1, but str2 is a counter from 0 to the size of str1
+* if the two 'str1' and 'str2' are equal, return true because it means they have the same combination of key value pairs, which represents a permutation
+* else, we need to adjust the window.
+* as a result, we reduce the frequency of s2[i] by 1
+* if there are no more occurences of s2[i] in the window (str2[s2[i]] == 0), we remove it from the dictionary
+* outside this if, we access the character in s2 that represents the next posiiton in the sliding window s2[len(s1)+i]
+* We slide the window over the entire string as a result
