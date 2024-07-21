@@ -745,4 +745,29 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 * Remove the left most if you find the right most is already in the set. increment the left by 1 and move on
 * The right is added to the set if it's not in the set (the right is the current one, indicated by a for loop)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[MEDIUM]: Problem 29: 
+[MEDIUM]: Problem 29: Longest Repeating Character Replacement: You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+
+Return the length of the longest substring containing the same letter you can get after performing the above operations.
+
+ 
+
+Example 1:
+
+Input: s = "ABAB", k = 2
+Output: 4
+Explanation: Replace the two 'A's with two 'B's or vice versa.
+Example 2:
+
+Input: s = "AABABBA", k = 1
+Output: 4
+Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+The substring "BBBB" has the longest repeating letters, which is 4.
+There may exists other ways to achieve this answer too.
+
+*Notes
+* Pretty hard problem for me, interested to see the redo
+* right pointer starts at 0 and goes till end of range of string
+* left ptr also starts at 0, but only increments when the window size - the maximum of our values in a hashmap are greater than k
+* in this case, we also decrement one from the left side of the window, to remove that current occurence
+* at the end of each iteration, make a variable that tracks the window size (left-right+1), and that will be the return type
+* Also remember to add to the hashmap at the beginning of each iteration
