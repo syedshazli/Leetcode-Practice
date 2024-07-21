@@ -715,7 +715,7 @@ Output: 1
  * Is sort of like a 2d array, but not really.
  * Calculate the area using this: (right-left)* min(height[right], height[left])
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[MEDIUM]: Problem 28: Given a string s, find the length of the longest 
+[MEDIUM]: Problem 28: Longest Substring Without Repeating Characters: Given a string s, find the length of the longest 
 substring
  without repeating characters.
 
@@ -745,3 +745,4 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 * Remove the left most if you find the right most is already in the set. increment the left by 1 and move on
 * The right is added to the set if it's not in the set (the right is the current one, indicated by a for loop)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[MEDIUM]: Problem 29: 
