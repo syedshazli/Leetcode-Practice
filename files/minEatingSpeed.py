@@ -1,3 +1,13 @@
+#Notes
+# Python 3 solution
+# This was a good problem for me. I initially had some trouble starting off but then I got really close with the algorithm.
+# I used to have an if elif, else, similar to bin search. But it turns out you only need an if and else for updating the bounds
+# then you can return the result outside the while loop. No need for returning inside although I'm sure it;s possible
+# Make sure you round up. The left would be the minimum eating speed (1) and right would be highest number in the list.
+# set the return variable to right in case we dont find success in our algorithm
+# while the left var is less than or equal to right var, reset hours, and loop through the list, rounding up and adding  piles[i]/middle to hours
+# This ensures we know how many hours it takes KOKO (after calcualting our middle) for the current speed "middle"
+# adjust left and right based on what we get for hours. If it takes too short, decrease the right variable, else, increase the left variable 
 
 class Solution:
     def minEatingSpeed(self, piles: List[int], h: int) -> int:
