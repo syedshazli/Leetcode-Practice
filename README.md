@@ -836,3 +836,22 @@ minStack.getMin(); // return -2
 *    if it is, make val equal to the end of the minStack
 * outside the if, append to the minStack the val
 * pop, top, annd getmin are one liners as a result of our minStack, Just remember to also pop from minstack when popping from normal stack
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[MEDIUM] Problem 32: Evaluate Reverse Polish Notation:
+--------------------------------
+[MEDIUM]: Problem 33: Daily Temperatures:
+--------------------------------
+[MEDIUM] Problem 34: Car Fleet:
+--------------------------------
+[MEDIUM] Problem 35: Search a 2D Matrix
+--------------------------------
+[MEDIUM]: Problem 36: Koko Eating Bananas
+--------------------------------
+[MEDIUM]: Problem 37: Find Minimum in Rotated Sorted Array
+--------------------------------
+[EASY]: Problem 38: Invert Binary Tree
+--------------------------------
+[EASY] Problem 39: Max Depth of Binary Tree
+--------------------------------
+[EASY]: Porblem 40: Same Tree
+--------------------------------
