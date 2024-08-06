@@ -5,11 +5,9 @@ class Solution(object):
         :rtype: List[int]
         """
         n = len(nums)
-        ans = []
-        for i in range(2*n):
-            if i <n:
-                # if i is less than the length of nums
-                ans.append(nums[i])
-            else:
-                ans.append(nums[i-n])
+        ans = [0] * (2*n)
+    
+        for i in range(len(nums)):
+            ans[i] = nums[i]
+            ans[i+len(nums)] = nums[i]
         return ans
