@@ -18,3 +18,4 @@ class Solution(object):
                 count+=1
                
         return count
+        #alternativkey, just set anything to count to max value and increment a counter. sort the list and return len of nums - coujterb
