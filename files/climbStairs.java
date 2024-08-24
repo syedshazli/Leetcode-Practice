@@ -6,6 +6,7 @@
    * Set "base cases." arr[0] will be 1, arr[1] is 1, and arr[2] is 2. (arr[0] is 1 in order to make arr[2] = arr[1] + arr[0] true)
    * From i to n, if i is not 0, 1, 2, arr[n] equals arr[n-1] + arr[n-2]
    * Return n.
+* this is dynamic programmign as wwll
      */
 class Solution {
     public int climbStairs(int n) {
