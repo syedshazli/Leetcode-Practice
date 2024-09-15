@@ -5,23 +5,27 @@
 # Do the same for all characters in t.
 # In python when we do equals equals for the two hashmaps, it will essentially check if the frequencies are the same.
 # Function will return true if the frequencies in hashmaps are the same and false otherwise
-class Solution(object):
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
-        firstFrequency = {}
-        secondFrequency = {}
-
-        for char in s:
-            firstFrequency[char] = firstFrequency.get(char, 0)+1
-
-        for char in t:
-            secondFrequency[char] = secondFrequency.get(char, 0) +1
-
-           
-        return firstFrequency == secondFrequency
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        #probably another hashmap problem
+        # t has to be in s
+        #2 separate for loops
+        # first one should loop through s, adding occurences to hashmap
+        # second loop iterates through t, checking if the current letter is in s
+        if len(s)!=len(t):
+            return False
         
+        hashmap = dict()
+        hashmapT = dict()
+        for i in range(len(s)):
+            hashmap[s[i]] = hashmap.get(s[i],0)+1
+        
+        for i in range(len(t)):
+            hashmapT[t[i]] = hashmapT.get(t[i],0)+1
+            # if t[i] not in hashmap:
+            #     return False
+            # else:
+            #     flag = True
+            #     print(t[i])
+        return hashmapT == hashmap
         
