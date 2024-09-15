@@ -1,17 +1,13 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashmap = dict()
-        resArr = []
- 
-        #for each number, store current number - target in array
-        # if the current number is in the hashmap, add the value of the hashmap to a result array as well as current index
+        resArr = [0,0]
+        num = 0
         for i in range(len(nums)):
-
-            if nums[i] in hashmap: #we found the 2nd value
-                print(nums[i])
-                resArr.append(i)
-                resArr.append(hashmap[nums[i]])
+            numtoFind = target-nums[i]
+            #print(numtoFind)
+            if numtoFind in hashmap:
+                resArr[0] = hashmap[numtoFind]
+                resArr[1] = i
                 return resArr
-            else:
-                current = target-nums[i]
-                hashmap[current] = i
+            hashmap[nums[i]] = i
