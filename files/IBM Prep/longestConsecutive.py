@@ -7,25 +7,17 @@ class Solution:
         #   reset counter to 1
         #else, counter +=1, currentLength +=1
         maximum = 1
-        j = 0
-        hashmap = {}
-        if len(nums) == 0:
+        if(len(nums) == 0):
             return 0
+        hashmap = {}
         for i in range(len(nums)):
             hashmap[nums[i]] = 0
-        
+
         for num in hashmap:
             if num-1 in hashmap:
-                # issue is that it is checking -1 and -1
-                print(nums[i]-1)
                 continue
-           
-
-                #start of sequence
-            j =1 
-            while num+j in hashmap:
+            j = 0
+            while j+num in hashmap:
                 j+=1
-
-            maximum = max(maximum, j)
-        print(hashmap)
+            maximum = max(j, maximum)
         return maximum
