@@ -5,6 +5,9 @@ class Solution:
         listS1 = list(s1)
         listS1.sort()
 
+        if len(s2)<len(s1):
+            return False
+            
         while i + len(s1)<=len(s2):
             listS2 = list(s2[i:i+len(s1)])
             listS2.sort()
