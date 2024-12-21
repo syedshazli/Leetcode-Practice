@@ -1,3 +1,4 @@
+# the row is the starting point and column is ending point of the edge
 vertexData = ['A', 'B', 'C', 'D']
 
 adjacency_matrix = [
